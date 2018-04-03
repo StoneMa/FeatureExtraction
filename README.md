@@ -8,12 +8,15 @@ feature extraction 特征提取，各类特征提取算法实现与三维特征�
 * 解决办法:下载``python3.dll`` 下载地址: https://www.python.org/ftp/python/3.5.2/python-3.5.2-embed-amd64.zip, 解压这个文件夹，将其中的python.dll 放入到Anaconda根目录
 
 * 如果执行过程中发现 ``AttributeError: module 'cv2' has no attribute 'SIFT'``，要注意的是opencv3中SIFT，Surf 算法不在是免费的，它们默认放入到opencv_contrib库中，目前仅支持python3.5 和Python3.6, 所以要 
-```bash
+```shell
 pip install opencv-contrib-python
 
-`` 
+```
+
 同时它与opencv-python不能共存,需要卸载：
-```bash
+
+```shell
 pip uninstall opencv-python
 ``` 
+
 即可。
