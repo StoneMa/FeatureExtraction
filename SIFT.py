@@ -2,6 +2,11 @@
 from matplotlib import pyplot as plt
 from lake.decorator import time_cost
 import cv2
+import sys
+
+print('=============')
+print(sys.path)
+print('=============')
 print ('cv version: ', cv2.__version__)
 
 
@@ -49,7 +54,7 @@ def sift_detect(img1, img2, detector='surf'):
     matches = bf.knnMatch(des1, des2, k=2)
 
     # Apply ratio test
-    good = [[m] for m, n in matches if m.distance < 0.5 * n.distance]
+    good = [[m] for m, n in matches if m.distance < 0.7 * n.distance]
 
     # cv2.drawMatchesKnn expects list of lists as matches.
     img3 = cv2.drawMatchesKnn(img1, kp1, img2, kp2, good, None, flags=2)
