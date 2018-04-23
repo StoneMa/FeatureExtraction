@@ -64,8 +64,8 @@ def sift_detect(img1, img2, detector='surf'):
 
 if __name__ == "__main__":
     # load image
-    image_a = cv2.imread('./lena2.jpg')
-    image_b = cv2.imread('./lena.jpg')
+    image_a = cv2.imread('./img/lena2.jpg')
+    image_b = cv2.imread('./img/lena.jpg')
 
     # ORB
     # img = orb_detect(image_a, image_b)

@@ -1,7 +1,7 @@
 import cv2
 
 # 读取图像
-im = cv2.imread('building.jpg')
+im = cv2.imread('img/building.jpg')
 #cv2.imshow('original',im)
 #cv2.waitKey()
 
