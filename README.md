@@ -29,4 +29,4 @@ pip uninstall opencv-python
 ## Harris Corner
 Harris 角点探测
 ## Hog 算法
-主要用于
+主要与SVM结合使用来实现行人检测
