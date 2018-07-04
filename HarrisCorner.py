@@ -1,6 +1,7 @@
+# Harris Corner 角点探测
 import numpy as np
 import cv2 as cv
-filename = './img/yu.png'
+filename = './img/lena.jpg'
 img = cv.imread(filename)
 gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 gray = np.float32(gray)

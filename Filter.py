@@ -1,5 +1,5 @@
 # -- coding: utf-8 --
-import cv2
+# 定义不同的滤波器，并用不同的滤波器对图像进行卷积
 import cv2
 import numpy as np
 from scipy import ndimage
@@ -15,10 +15,10 @@ kernel_5x5 = np.array([[-1, -1, -1, -1, -1],
                        [-1, 1, 2, 1, -1],
                        [-1, -1, -1, -1, -1]])
 #显示原始图像
-cv2.imshow("org", cv2.imread("./img/lena.jpg"))
+cv2.imshow("org", cv2.imread("./lena.jpg"))
 
 #以灰度的方式加载图片
-img = cv2.imread("./img/lena.jpg", 0)
+img = cv2.imread("./lena.jpg", 0)
 cv2.imshow("img", img)
 
 #通过使用模板矩阵进行高通滤波

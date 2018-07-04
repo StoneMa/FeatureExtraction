@@ -1,3 +1,4 @@
+# KNN 算法，叫K临近算法
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,10 +20,11 @@ plt.scatter(blue[:,0],blue[:,1],80,'b','s')
 # 新加入的绿色圆圈
 newcomer = np.random.randint(0,100,(1,2)).astype(np.float32)
 plt.scatter(newcomer[:,0],newcomer[:,1],80,'g','o')
+# 调用机器学习包中的K临近算法
 knn = cv2.ml.KNearest_create()
 knn.train(trainData, cv2.ml.ROW_SAMPLE, responses)
-ret, results, neighbours ,dist = knn.findNearest(newcomer, 3)
-# 打印结果，如果属于red ,result中属于0 label;如果是blue,就是result=1
+ret, results, neighbours ,dist = knn.findNearest(newcomer, 3) # 第一个参数是待分类的样本，第二个是采样个数
+# 打印结果，如果属于red ,result=0;如果是blue,就是result=1
 print( "result:  {}\n".format(results) )
 print( "neighbours:  {}\n".format(neighbours) )
 print( "distance:  {}\n".format(dist) )

@@ -2,7 +2,7 @@
 feature extraction 特征提取，各类特征提取算法实现与三维特征提取
 
 # env: Win10, Annaconda3， Python3.5, Opencv3
-# note:
+# Attention:
 * 如果执行的时候会出现 ``import cv2`` 错误
   
 * 解决办法:下载``python3.dll`` 下载地址: https://www.python.org/ftp/python/3.5.2/python-3.5.2-embed-amd64.zip, 解压这个文件夹，将其中的python3.dll 放入到Anaconda根目录
@@ -19,4 +19,14 @@ pip install opencv-contrib-python
 pip uninstall opencv-python
 ``` 
 
-即可。
+执行上述即可正常运行。
+## Canny 边缘提取
+通过Canny提取图像边缘
+##FeatureDetection
+这里使用的是SURF方法进行的特征提取
+##Filter
+图像滤波器的卷积操作
+## Harris Corner
+Harris 角点探测
+## Hog 算法
+主要用于
