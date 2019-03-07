@@ -3,6 +3,15 @@ feature extraction 特征提取，各类特征提取算法实现与三维特征�
 
 # env: Win10, Annaconda3， Python3.5, Opencv3
 # Attention:
+最近一次更新：
+在安装了``opencv-contrib-python-4.0.0.21``版本后，无法使用``cv2.xfeatures2d.SIFT_create()``方法。
+
+解决办法：
+卸载``opencv-contrib-python`` : ``pip uninstall opencv-contrib-python``
+使用低版本重新安装：``pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencv-contrib-python==3.4.2.16``
+安装完成后，问题解决，需要注意的是为了解决下载速度慢的问题，使用清华大学开源镜像库能快速完成。
+
+
 * 如果执行的时候会出现 ``import cv2`` 错误
   
 * 解决办法:下载``python3.dll`` 下载地址: https://www.python.org/ftp/python/3.5.2/python-3.5.2-embed-amd64.zip, 解压这个文件夹，将其中的python3.dll 放入到Anaconda根目录
